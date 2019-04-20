@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard</h1>
+  <h3>Welcome <small>
+    {% if session.administrator == '1'%}
+     <span class="text-danger"> {{session.username}} </span>
+  </small>
+    {% else %}
+  <small>
+      <span class="text-success"> {{session.username}} </span>
+    </small>
+    {% endif %}
+</h3>
+  <a class="btn btn-success" href="/add_article">Add article</a>
+  <table class="table table-striped mt-2">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for article in articles %}
+    <tr>
+      <td>{{article.id}}</td>
+      <td>{{article.title}}</td>
+      <td>{{article.author}}</td>
+      <td>{{article.create_date}}</td>
+      <td><a href="edit_article/{{article.id}}" class="btn btn-dark">Edit</a></td>
+      <td>
+        <form action="{{url_for('delete_article', id=article.id)}}" method="POST"  onsubmit='return confirm("Are you sure?")'>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

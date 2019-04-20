@@ -1,0 +1,6 @@
+docker-commands.txt
+requirement.txt
+Dockerfile
+
+__pycache__/
+.vscode/
