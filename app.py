@@ -11,8 +11,11 @@ app.env = ''
 
 # Config MySQL
 # use 'mysql' host when connect to mysql on docker with docker-network
-app.config['MYSQL_HOST'] = 'mysql'
+app.config['MYSQL_HOST'] = '127.0.0.1'
+app.config['MYSQL_PORT'] = '8001'
 app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'aabbccdd'
+# docker mysql password = root
 app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'myflaskapp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
@@ -290,4 +293,5 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    # must leave host='0.0.0.0' if run on docker
+    app.run(debug=True, host='127.0.0.1', port=5000)

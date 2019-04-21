@@ -1,0 +1,78 @@
+<!-- Heading -->
+# Heading 1 - Italic
+<!-- Italics -->
+*This text* is italic
+
+_This text_ is italic
+
+## Heading 2 - strong
+<!-- Strong -->
+**This text** is strong
+
+__This text__ is strong
+
+<!-- Strikethrough -->
+~~This is~~ is strikethrough
+
+<!-- Horizontal rule -->
+
+---
+
+<!-- Blockquote -->
+> This is a quote
+
+<!-- Links -->
+[Traversy Media](http://www.traversymedia.com)
+
+[TraversyMedia](http://www.traversymedia.com "Traversy")
+
+<!-- UL -->
+* Item 1
+* Item 2
+  * Nested item 1
+  * Nested item 2
+
+<!-- OL -->
+1. Item 1
+    1. item 1.1
+    2. item 1.2
+    3. item 1.3
+2. Item 2
+3. Item 3
+
+<!-- Inline code block -->
+`<p>This is a paragraph</p>`
+
+<!-- Images -->
+![Markdown logo](https://markdown-here.com/img/icon256.png)
+
+<!-- Github Mardown -->
+
+<!-- Code blocks -->
+```bash
+  npm install
+  npm start
+```
+
+```javascript
+  function add(num1, num2) {
+    return num1 + num2;
+  }
+```
+
+```python
+  def add(num1, num2) {
+    return num1 + num2
+  }
+```
+
+<!-- Table -->
+|Name    | Email   |
+|--------|---------|
+|John Doe|jd@jd.com|
+|John Do |jd@jd.com|
+
+<!-- Task list -->
+* [x] Task 1
+* [] Task 2
+
