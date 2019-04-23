@@ -1,4 +1,4 @@
-<!-- Heading -->
+<!-- Heading style-->
 # Heading 1 - Italic
 <!-- Italics -->
 *This text* is italic
